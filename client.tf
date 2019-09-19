@@ -9,7 +9,7 @@ resource "aws_security_group_rule" "client-egress" {
 
 resource "aws_security_group" "client" {
   name        = "${local.client_sg_name}"
-  description = "Allow outbound traffic to members of ${local.server_sg_name} security group"
-  vpc_id      = "${var.vpc_id}"
+  description = "Allow outbound traffic to ${local.server_sg_name} security group"
+  vpc_id      = "${data.aws_vpc.selected.id}"
   tags        = "${merge(var.tags, map("Name", local.client_sg_name))}"
 }
