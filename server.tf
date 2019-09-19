@@ -9,7 +9,7 @@ resource "aws_security_group_rule" "server-ingress" {
 
 resource "aws_security_group" "server" {
   name        = "${local.server_sg_name}"
-  description = "Allow inbound traffic from members of ${local.client_sg_name} security group"
-  vpc_id      = "${var.vpc_id}"
+  description = "Allow inbound traffic from ${local.client_sg_name} security group"
+  vpc_id      = "${data.aws_vpc.selected.id}"
   tags        = "${merge(var.tags, map("Name", local.server_sg_name))}"
 }
