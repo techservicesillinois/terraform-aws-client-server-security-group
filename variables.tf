@@ -15,6 +15,7 @@ variable "server_sg_name" {
 
 variable "port" {
   description = "Server port"
+  type        = number
 }
 
 variable "protocol" {
@@ -24,6 +25,7 @@ variable "protocol" {
 
 variable "tags" {
   description = "Tags to be applied"
+  type        = map(string)
   default     = {}
 }
 
