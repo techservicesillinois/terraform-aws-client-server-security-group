@@ -1,4 +1,6 @@
-# terraform-aws-client-server-security-group
+# client-server-security-group
+
+[![Build Status](https://drone.techservices.illinois.edu/api/badges/techservicesillinois/terraform-aws-client-server-security-group/status.svg)](https://drone.techservices.illinois.edu/techservicesillinois/terraform-aws-client-server-security-group)
 
 Provides two security groups for use in client/server communications
 on a given port. The client security group allows only outbound
@@ -15,7 +17,7 @@ module "foo" {
   source = "git@github.com:techservicesillinois/terraform-aws-client-server-security-group"
 
   name_prefix = "authman-db"
-  port        = "3306"
+  port        = 3306
   vpc         = "techservicesastest2-vpc"
 }
 ```
