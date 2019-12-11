@@ -12,4 +12,8 @@ resource "aws_security_group" "client" {
   description = "Allow outbound traffic to ${local.server_sg_name} security group"
   vpc_id      = "${data.aws_vpc.selected.id}"
   tags        = "${merge(var.tags, map("Name", local.client_sg_name))}"
+
+  lifecycle {
+    ignore_changes = ["description"]
+  }
 }
