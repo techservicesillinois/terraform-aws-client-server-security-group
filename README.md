@@ -1,6 +1,6 @@
 # client-server-security-group
 
-[![Build Status](https://drone.techservices.illinois.edu/api/badges/techservicesillinois/terraform-aws-client-server-security-group/status.svg)](https://drone.techservices.illinois.edu/techservicesillinois/terraform-aws-client-server-security-group)
+[![Terraform actions status](https://github.com/techservicesillinois/terraform-aws-client-server-security-group/workflows/terraform/badge.svg)](https://github.com/techservicesillinois/terraform-aws-client-server-security-group/actions)
 
 Provides two security groups for use in client/server communications
 on a given port. The client security group allows only outbound
